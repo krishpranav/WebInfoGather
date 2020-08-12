@@ -5,6 +5,11 @@ import requests
 import socket
 import platform
 
+def author():
+    print("Tool Is Created By Krisna Pranav")
+    print("Github Link https://github.com/krishpranav")
+    print("Do Not Forget To Follow Me")
+
 def choice_options():
     print("""
 \033[39m 1)\033[96m Whois Lookup             \033[39m8)\033[96m HTTP Header
@@ -144,6 +149,7 @@ def opciones():
 
         elif valorselec == '14':
             exit
+            author()
 
         else:
 
