@@ -30,7 +30,7 @@ def InfoGathe():
         if 1 > 2 :
               print("buffer")
         else:
-            opciones()
+            options()
 
 
     except socket.gaierror:
@@ -45,7 +45,7 @@ def InfoGathe():
 
 
 
-def opciones():
+def options():
 
         website = input('\033[96mEnter Your Target Website > \033[39m')
         choice_options()
@@ -56,7 +56,7 @@ def opciones():
             info = requests.get(whois)
             print('\033[99m')
             print(info.text)
-            opciones()
+            options()
 
 
         elif valorselec == '2':
@@ -64,35 +64,35 @@ def opciones():
             info = requests.get(dnslook)
             print('\033[99m')
             print(info.text)
-            opciones()
+            options()
 
         elif valorselec == '3':
             ipgeo = 'https://api.hackertarget.com/geoip/?q='+website
             info = requests.get(ipgeo)
             print('\033[99m')
             print(info.text)
-            opciones()
+            options()
 
         elif valorselec == '4':
             subnet = 'http://api.hackertarget.com/subnetcalc/?q='+website
             info = requests.get(subnet)
             print('\033[99m')
             print(info.text)
-            opciones()
+            options()
 
         elif valorselec == '5':
             port = 'https://api.hackertarget.com/nmap/?q='+website
             info = requests.get(port)
             print('\033[99m')
             print(info.text)
-            opciones()
+            options()
 
         elif valorselec == '6':
             pagelink = 'https://api.hackertarget.com/pagelinks/?q='+website
             info = requests.get(pagelink)
             print('\033[99m')
             print(info.text)
-            opciones()
+            options()
 
         elif valorselec == '7':
             zone = 'https://api.hackertarget.com/zonetransfer/?q='+website
@@ -106,14 +106,14 @@ def opciones():
             info = requests.get(header)
             print('\033[99m')
             print(info.text)
-            opciones()
+            options()
 
         elif valorselec == '9':
             host = "https://api.hackertarget.com/hostsearch/?q="+website
             info = requests.get(host)
             print('\033[99m')
             print(info.text)
-            opciones()
+            options()
 
         elif valorselec == '10':
             website = socket.gethostbyname(website)
@@ -121,7 +121,7 @@ def opciones():
             info = requests.get(iplt)
             print('\033[99m')
             print(info.text)
-            opciones()
+            options()
 
         elif valorselec == '11':
 
@@ -129,21 +129,21 @@ def opciones():
             info = requests.get(shared)
             print('\033[99m')
             print(info.text)
-            opciones()
+            options()
 
         elif valorselec == '12':
             robots ='http://'+website+'/robots.txt'
             info = requests.get(robots)
             print('\033[99m')
             print(info.text)
-            opciones()
+            options()
 
         elif valorselec == '13':
             hostdns = 'https://api.hackertarget.com/mtr/?q='+website
             info = requests.get(hostdns)
             print('\033[99m')
             print(info.text)
-            opciones()
+            options()
 
 
 
